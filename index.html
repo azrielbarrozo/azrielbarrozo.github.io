@@ -1,7 +1,147 @@
 <!DOCTYPE html>
-<html>
-<body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+<html lang="en">
+
+<head>
+    <title>Home</title>
+    <link rel="stylesheet" href="https://unpkg.com/98.css">
+    <link rel="stylesheet" href="./style.css">
+    <!-- <link rel="icon" href="./favicon.ico" type="image/x-icon"> -->
+</head>
+
+
+<body onload="clock()">
+<main>
+<!--Shortcuts-->
+
+    <!--Recycling Bin-->
+    <div class="shortcut">
+        <img src="./icons/recycle_bin_empty-4.png">
+        <p>Recycle Bin</p>
+    </div>
+
+    <!--Terminal-->
+    <div class="shortcut">
+        <img src="./icons/console_prompt-0.png">
+        <p>Terminal</p>
+    </div>
+
+<!--Windows-->
+
+    <!--Browser-->
+    <div class="window" style="width: 1000px; height: 600px; position: absolute; left: 500px; top: 220px;" id="browser">
+        <div class="title-bar">
+            <img src="./icons/directory_closed-1.png">
+            <div style="position: absolute; left: 26px;" class="title-bar-text">Explorer</div>
+            <div class="title-bar-controls">
+                <button id="infoMin" aria-label="Minimize"></button>
+                <!-- <button aria-label="Maximize"></button> -->
+                <button id="infoClose" aria-label="Close"></button>
+            </div>
+        </div>
+        <div class="window-body">
+            <div class="browser-topbar">
+                <p><u>F</u>ile</p>
+                <p><u>E</u>dit</p>
+                <p><u>V</u>iew</p>
+                <p><u>B</u>ookmarks</p>
+                <p><u>T</u>ools</p>
+                <p><u>H</u>elp</p>
+            </div>
+            <div style="padding: 0px; padding-bottom: 5px;" class="status-bar">
+                <p class="status-bar-field">Address</p>
+                <pre class="status-bar-field">http://www.myverycoolwebsite.net/                                                                                                  </pre>
+                <p class="status-bar-field">Go</p>
+                <p class="status-bar-field">Links</p>
+            </div>
+            <div class="browser-body sunken-panel">
+                <h4>Welcome to my site!</h4>
+                <p>Nam mi dui, aliquam quis tincidunt a, iaculis vel libero. Nullam at metus quis leo laoreet convallis eu at nunc. </p>
+                <p>Nullam porttitor sem eu purus imperdiet, vel maximus justo sagittis. Phasellus nec pulvinar ligula, in malesuada dui. Integer dignissim vestibulum. </p>
+                <img src="./img/CLOUD09J.GIF">
+
+                <h4>What is this?</h4>
+                <img src="./gif/picmix.com_2206376.gif">
+                <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi et arcu nibh. Duis non porttitor quam. Vivamus lectus diam, suscipit in erat et, eleifend mattis lacus. Ut sed scelerisque massa, a convallis enim. Duis cursus nisl justo, at cursus nisi porta et. Donec pharetra id ante at viverra. Cras dictum eros non fermentum fermentum. Aliquam nec nibh ac ipsum ultricies ullamcorper sed fermentum velit. Morbi pellentesque augue ut euismod pretium.</p>
+                
+                <p>Proin finibus, enim mattis finibus sodales, risus metus cursus eros, at bibendum dolor nisi nec tellus. Sed aliquet efficitur fringilla. Nam efficitur orci a sagittis volutpat. Integer tempor ex in tellus bibendum vestibulum. Fusce nibh elit, lacinia et libero id, dictum tristique dui. Sed tincidunt imperdiet auctor. Nam ut massa fermentum, porta dui a, convallis enim. Donec sollicitudin lobortis velit. Ut aliquam aliquet nisi vitae laoreet. Donec vulputate lacinia hendrerit. Nunc vestibulum nibh in venenatis bibendum. Praesent in augue aliquet, cursus dui ac, vehicula est.</p>
+                
+                <p>Suspendisse non velit dictum, maximus dolor et, congue turpis. Donec nec arcu sed nisi imperdiet accumsan. Quisque maximus neque ipsum, id gravida lectus porta sit amet. Duis convallis rutrum dui, sit amet fermentum purus placerat non. Etiam eu pellentesque tellus. Curabitur arcu tellus, efficitur sit amet dolor ut, venenatis auctor risus. Integer sagittis mauris sed risus egestas vehicula. Sed lorem elit, varius non ullamcorper eget, volutpat ut nunc.</p> 
+                <img src="./gif/adcdnow1.gif">
+
+            </div>
+            <div style="padding: 4px;" class="status-bar">
+                <p class="status-bar-field">Done!</p>
+                <p class="status-bar-field">Internet</p>
+            </div>
+        </div>
+    </div>
+
+    <!--Info-->
+    <div class="window" style="width: 300px; position: absolute; left: 900px; top: 150px;" id="info">
+        <div class="title-bar">
+            <div class="title-bar-text">Info</div>
+            <div class="title-bar-controls">
+                <button aria-label="Minimize"></button>
+                <!-- <button aria-label="Maximize"></button> -->
+                <button aria-label="Close"></button>
+            </div>
+        </div>
+        <div class="window-body">
+            <p>Nam mi dui, aliquam quis tincidunt a, iaculis vel libero. Nullam at metus quis leo laoreet convallis eu at nunc. </p>
+            <p>Nullam porttitor sem eu purus imperdiet, vel maximus justo sagittis. Phasellus nec pulvinar ligula, in malesuada dui. Integer dignissim vestibulum. </p>
+        </div>
+    </div>
+
+    <!--Links-->
+    <div class="window" style="position: absolute; left: 1300px; top: 450px" id="links">
+        <div class="title-bar">
+            <div class="title-bar-text">Links</div>
+            <div class="title-bar-controls">
+                <button aria-label="Minimize"></button>
+                <!-- <button aria-label="Maximize"></button> -->
+                <button aria-label="Close"></button>
+            </div>
+        </div>
+        <div class="window-body">
+            <img src="./gif/blinkiesCafe-Yp.gif">
+            <img src="./gif/blinkiesCafe-0A.gif">
+            <br>
+            <img src="./gif/blinkiesCafe-yA.gif">
+        </div>
+    </div>
+
+    <!--Video-->
+    <div class="window" style="width: 300px; position: absolute; left: 400px; top: 650px" id="video">
+        <div class="title-bar">
+            <div class="title-bar-text"></div>
+            <div class="title-bar-controls">
+                <button aria-label="Minimize"></button>
+                <!-- <button aria-label="Maximize"></button> -->
+                <button aria-label="Close"></button>
+            </div>
+        </div>
+        <div class="window-body">
+            <img style="width:100%; height:100%;" src="./gif/webcore-cute_frogs.gif">
+        </div>
+    </div>
+
+    <!--Image-->
+    <div style="width: 50px; position: absolute; left: 1200px; bottom: 280px;" id="image">
+        <img src="./gif/hourglassdog-aleha.gif">
+    </div>
+
+
+</main>
+
+<div id="taskbar">
+    <button id="menu">Start</button>
+    <div class="divider"></div>
+    <!--<button style="height: 30px; width: 100px; position: fixed; right: 4px;">clock</button>>-->
+    <div id="clock"><p id="clocktxt"></p></div>
+</div>
+
+<script src="./index.js"></script>
 </body>
+
 </html>
