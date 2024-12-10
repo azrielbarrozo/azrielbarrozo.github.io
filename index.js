@@ -1,10 +1,10 @@
 //draggable elements
 dragElement(document.getElementById("info"));
 dragElement(document.getElementById("links"));
-dragElement(document.getElementById("image"));
-dragElement(document.getElementById("video"));
 dragElement(document.getElementById("browser"));
-
+dragElement(document.getElementById("notepad"));
+dragElement(document.getElementById("media"));
+dragElement(document.getElementById("image"));
 
 // code for dragging windows/elements (from w3schools)
 function dragElement(elmnt) {
@@ -50,21 +50,31 @@ function dragElement(elmnt) {
 
 }
 
+function startup() {
+    setTimeout(loading, 1000);
+    clock();
+}
+
+function loading() {
+    document.getElementById("loading").style.display = "none";
+}
+
 // js clock
 function clock() {
     const d = new Date();
     var h = d.getHours();
     var m = d.getMinutes();
     var a = "";
-    h = modHours(h)
-    m = modTime(m)
 
     // check AM or PM
-    if (h > 12) {
+    if (h >= 12) {
         a = " PM";
     } else {
         a = " AM";
     }
+
+    h = modHours(h)
+    m = modTime(m)
 
     // set time
     document.getElementById("clocktxt").innerHTML = h + ": " + m + a;
@@ -89,3 +99,57 @@ function clock() {
     }
     
 }
+
+// hide and unhide element
+function toggleElement(elid) {
+    var el = document.getElementById(elid);
+    if (el.style.display == "none") {
+        el.style.display = "block";
+    } else {
+        el.style.display = "none";
+    }
+}
+
+function unhideElement(elid) {
+    var el = document.getElementById(elid);
+    el.style.display = "block";
+    el.parentElement.appendChild(el);
+}
+
+function hideElement(elid) {
+    var el = document.getElementById(elid);
+    el.style.display = "none";
+}
+
+// webpages
+var linksList = [
+    ["error", "./error.html"],
+    ["www.titorfans.net", "./titorfans.html"],
+    ["www.keystone.live", "./key.html"]
+]
+
+function visitSite() {
+    var page = document.getElementById("browser-content");
+    var linkURL = document.getElementById("browser-input").value;
+    var link;
+
+    for(let i = 0; i < linksList.length; i++) {
+        link = checkLink(linksList[i]);
+        if (link) {
+            i = 0;
+            page.src=link;
+            return 0;
+        }
+    }
+    page.src="./error.html";
+
+    function checkLink(value) {
+        if (value[0] == linkURL){
+            return value[1];
+        } else {
+            return false;
+        }
+    }
+
+}
+

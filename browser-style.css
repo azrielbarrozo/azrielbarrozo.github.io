@@ -1,0 +1,41 @@
+* {
+    font-family: "Pixelated MS Sans Serif", Arial;
+}
+
+p {
+    font-size: 1.1em;
+}
+
+#titorfans {
+    background-color: white; 
+    /* background-image: url("./img/ciq60498.jpg"); */
+    background-size: cover;
+    /* border: inset 2px white; */
+    color: black;
+    margin: auto;
+    width: 70%;
+}
+
+#titorfans img {
+    margin-top: 10px;
+    width: 50%;
+    position: relative;
+    left: 25%;
+}
+
+#error {
+    padding-top: 0px;
+    padding-left: 7px;
+    background-color: white;
+}
+
+#keystone {
+    color: white;
+    background: black;
+}
+
+#notepad {
+    color: black;
+    font-size: 12px;
+}
+
